@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* ============================================
+   Hilaac Ember — Brand Color System
+   ============================================ */
+
+@theme inline {
+  /* --- Brand palette --- */
+  --color-obsidian: #17191b;
+  --color-charcoal: #24282b;
+  --color-saffron: #f2a900;
+  --color-saffron-light: #ffc44d;
+  --color-ivory: #fff8ea;
+  --color-sand: #e8d8ba;
+  --color-ink: #202326;
+  --color-muted: #667078;
+
+  /* --- Semantic status --- */
+  --color-success: #2e7d5b;
+  --color-warning: #b96818;
+  --color-danger: #b94a48;
+  --color-info: #527a78;
+
+  /* --- Semantic surfaces (map to theme-aware variables) --- */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* --- Typography --- */
+  --font-heading: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ============================================
+   Light theme (default)
+   ============================================ */
+
+:root {
+  --background: #fff8ea;
+  --foreground: #202326;
+  --surface: #ffffff;
+  --surface-subtle: #f4ebdd;
+  --surface-muted: #e8d8ba;
+  --border: #d8c8a9;
+  --brand: #f2a900;
+  --brand-hover: #d98f00;
+  --brand-foreground: #17191b;
+  --muted-foreground: #667078;
+
+  --radius: 0.5rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.75rem;
+}
+
+/* ============================================
+   Dark theme
+   ============================================ */
+
+.dark {
+  --background: #17191b;
+  --foreground: #fff8ea;
+  --surface: #24282b;
+  --surface-subtle: #2d3336;
+  --surface-muted: #3a4043;
+  --border: #485054;
+  --brand: #ffc44d;
+  --brand-hover: #f2a900;
+  --brand-foreground: #17191b;
+  --muted-foreground: #b8b3a7;
+}
+
+/* ============================================
+   Base styles
+   ============================================ */
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Visible focus ring */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

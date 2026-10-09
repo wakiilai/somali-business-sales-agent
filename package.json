@@ -7,9 +7,10 @@
   "engines": { "node": ">=22.0.0" },
   "scripts": {
     "verify:foundation": "node scripts/check-foundation.mjs",
-    "lint": "node scripts/check-foundation.mjs",
-    "typecheck": "node scripts/check-foundation.mjs",
-    "test": "node scripts/check-foundation.mjs",
-    "build": "node scripts/check-foundation.mjs"
+    "lint": "pnpm --filter web lint",
+    "typecheck": "pnpm --filter web typecheck",
+    "test": "pnpm --filter web test",
+    "build": "pnpm --filter web build",
+    "dev": "pnpm --filter web dev"
   }
 }
