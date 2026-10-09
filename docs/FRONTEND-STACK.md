@@ -84,7 +84,8 @@ apps/web/
 
 ## Design direction
 
-- Dark navy application shell with restrained gold accent.
+- **Hilaac Ember** brand system: Obsidian charcoal shell, Saffron energy accent, warm Ivory surfaces, and Sand separation.
+- Hilaac means lightning. The palette communicates energy and attention without using generic navy-blue SaaS or AI-purple styling.
 - Sora headings, DM Sans body.
 - High-trust operational visual language, not generic AI purple.
 - Dense enough for staff work, but never cramped.
@@ -96,7 +97,21 @@ apps/web/
 - Fully responsive: desktop staff console, tablet, and usable mobile fallback.
 - Full keyboard navigation, visible focus, reduced motion, semantic landmarks, and WCAG AA contrast.
 
-## Data boundary
+### Hilaac Ember tokens
+
+```text
+Obsidian:       #17191B
+Charcoal:       #24282B
+Saffron:        #F2A900
+Saffron Light:  #FFC44D
+Ivory:          #FFF8EA
+Sand:           #E8D8BA
+Ink:            #202326
+Muted:          #667078
+```
+
+Functional status colors are separate semantic tokens: Success `#2E7D5B`, Warning `#B96818`, Danger `#B94A48`, Info `#527A78`.
+
 
 The frontend is initially fixture-backed. Do not create fake backend calls, fake Supabase clients, or invented integration APIs. Build typed adapters so real API integration can replace fixtures later.
 

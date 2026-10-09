@@ -64,7 +64,7 @@ Do not add unnecessary dependencies. If a library is missing, install it using t
 
 ## Visual direction
 
-Reading this as: a high-trust staff operations console for a Somali retail business, with a premium dark navy and gold visual language, moderate information density, restrained motion, and clear business hierarchy.
+Reading this as: a high-trust staff operations console for a Somali retail business, with the **Hilaac Ember** visual language, moderate information density, restrained motion, and clear business hierarchy.
 
 Design dials:
 
@@ -72,18 +72,31 @@ Design dials:
 - MOTION_INTENSITY: 4
 - VISUAL_DENSITY: 6
 
+Hilaac means lightning. The visual identity should communicate energy, attention, and trusted commerce without navy blue, generic AI purple, or neon technology clichés.
+
 Brand tokens:
 
-- Deep navy: #0B1628
-- Gold: #C49A28
-- Gold light: #E8B84B
-- Cream: #F5F5F0
-- Ink: #101827
-- Positive: accessible emerald
-- Warning: accessible amber
-- Danger: accessible red
+```text
+Obsidian:       #17191B
+Charcoal:       #24282B
+Saffron:        #F2A900
+Saffron Light:  #FFC44D
+Ivory:          #FFF8EA
+Sand:           #E8D8BA
+Ink:            #202326
+Muted:          #667078
+```
 
-Use semantic CSS variables. Do not scatter raw colors across components.
+Functional status colors:
+
+```text
+Success: #2E7D5B
+Warning: #B96818
+Danger:  #B94A48
+Info:    #527A78
+```
+
+Use semantic CSS variables. Do not scatter raw colors across components. Use Saffron selectively for primary actions, active navigation, important highlights, and approval controls. Do not add blue, purple, cyan, or pink decorative accents.
 
 The interface should feel like a serious, calm operations product. It should not look like a chatbot landing page or a generic admin template.
 
