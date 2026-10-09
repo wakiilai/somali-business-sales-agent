@@ -1,0 +1,65 @@
+import type { Conversation } from "@/lib/contracts/conversation";
+
+export const conversations: Conversation[] = [
+  {
+    id: "conv-001",
+    customerName: "Faarax Cali",
+    language: "so",
+    intent: "product_inquiry",
+    status: "active",
+    owner: "Sales Manager",
+    lastMessageAt: "2026-10-09T09:30:00Z",
+    messages: [
+      { id: "msg-1", role: "customer", content: "Asc, waxaan rabaa Samsung Galaxy A54. Waa imisa qiimihiisu?", timestamp: "2026-10-09T09:28:00Z" },
+      { id: "msg-2", role: "assistant", content: "Waad salaaman tihiin! Samsung Galaxy A54 5G (128GB) waa $349. Hadda wuu jiraa. Ma kaa caawiyaa dalab samaynta?", timestamp: "2026-10-09T09:29:00Z", verified: true, sourceRef: "prod-001" },
+      { id: "msg-3", role: "customer", content: "Haa fadlan, qiimo-dhimis ma leedahay?", timestamp: "2026-10-09T09:30:00Z" },
+    ],
+    unread: true,
+  },
+  {
+    id: "conv-002",
+    customerName: "Maryan Yuusuf",
+    language: "en",
+    intent: "price_check",
+    status: "waiting",
+    owner: "Sales Manager",
+    lastMessageAt: "2026-10-09T09:00:00Z",
+    messages: [
+      { id: "msg-4", role: "customer", content: "Hi, how much is the Sony headphones? The noise-cancelling ones.", timestamp: "2026-10-09T08:55:00Z" },
+      { id: "msg-5", role: "assistant", content: "The Sony WH-1000XM5 is $299 and currently in stock. 30-hour battery with multipoint connection. Would you like to place an order?", timestamp: "2026-10-09T08:56:00Z", verified: true, sourceRef: "prod-004" },
+      { id: "msg-6", role: "customer", content: "Can I get a discount for two units?", timestamp: "2026-10-09T09:00:00Z" },
+    ],
+    unread: false,
+  },
+  {
+    id: "conv-003",
+    customerName: "Cumar Xasan",
+    language: "mixed",
+    intent: "availability_check",
+    status: "handed_off",
+    owner: "Support Agent",
+    lastMessageAt: "2026-10-09T08:15:00Z",
+    messages: [
+      { id: "msg-7", role: "customer", content: "Salaan, waa jiraa Dell Inspiron 15? I need it for work.", timestamp: "2026-10-09T08:10:00Z" },
+      { id: "msg-8", role: "assistant", content: "Dell Inspiron 15 hadda ma jiro — waa out of stock. Ma doonaysaa inaan kula taliyo beddel?", timestamp: "2026-10-09T08:11:00Z", verified: true, sourceRef: "prod-005" },
+      { id: "msg-9", role: "customer", content: "Haa fadlan. I also want to check MacBook Air.", timestamp: "2026-10-09T08:12:00Z" },
+      { id: "msg-10", role: "assistant", content: "MacBook Air M3 waa unavailable catalog-kayaga hadda. Kuma xaqiijin karno macluumaadka. Waxaan kugu wareejinayaa staff si ay kaaga caawiyaan.", timestamp: "2026-10-09T08:13:00Z", verified: false },
+      { id: "msg-11", role: "system", content: "Conversation handed off to Support Agent.", timestamp: "2026-10-09T08:15:00Z" },
+    ],
+    unread: false,
+  },
+  {
+    id: "conv-004",
+    customerName: "Sahra Maxamed",
+    language: "so",
+    intent: "new_inquiry",
+    status: "active",
+    owner: "Sales Manager",
+    lastMessageAt: "2026-10-09T07:00:00Z",
+    messages: [
+      { id: "msg-12", role: "customer", content: "Subax wanaagsan. Waxaan rabaa TV cusub oo Samsung ah.", timestamp: "2026-10-09T06:58:00Z" },
+      { id: "msg-13", role: "assistant", content: "Subax wanaagsan! Waxaan haynaa Samsung 43\" Crystal UHD 4K TV oo ah $429. Hadda wuu diyaar yahay. Ma jeceshahay inaan dalab kaa samayno?", timestamp: "2026-10-09T07:00:00Z", verified: true, sourceRef: "prod-002" },
+    ],
+    unread: true,
+  },
+];
