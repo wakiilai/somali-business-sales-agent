@@ -3,15 +3,17 @@ import { test, expect } from "@playwright/test";
 test.describe("Hilaac Electronics — smoke tests", () => {
   test("/chat loads and shows demo-data notice", async ({ page }) => {
     await page.goto("/chat");
-    await expect(page.locator("text=Demo data")).toBeVisible();
-    await expect(page.locator("text=Hilaac Electronics")).toBeVisible();
+    await expect(page.getByRole("alert").getByText("Demo data")).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Hilaac Electronics" })
+    ).toBeVisible();
   });
 
   test("/dashboard loads with operational cards", async ({ page }) => {
     await page.goto("/dashboard");
     await expect(page.locator("text=New Inquiries")).toBeVisible();
     await expect(page.locator("text=Pending Approvals")).toBeVisible();
-    await expect(page.locator("text=Demo data")).toBeVisible();
+    await expect(page.getByRole("alert").getByText("Demo data")).toBeVisible();
   });
 
   test("/approvals renders queue with approve/reject buttons", async ({ page }) => {
@@ -24,7 +26,8 @@ test.describe("Hilaac Electronics — smoke tests", () => {
 
   test("/audit renders event log", async ({ page }) => {
     await page.goto("/audit");
-    await expect(page.locator("text=Audit Log")).toBeVisible();
-    await expect(page.locator("text=Demo data")).toBeVisible();
+    const auditHeading = page.getByRole("heading", { name: /Audit Log/ });
+    await expect(auditHeading).toBeVisible();
+    await expect(auditHeading.getByText("Demo data")).toBeVisible();
   });
 });
