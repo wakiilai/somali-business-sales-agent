@@ -1,0 +1,11 @@
+# Code ownership
+
+* @MKSalad
+
+# Security-sensitive areas
+/docs/security/ @MKSalad
+/tests/security/ @MKSalad
+/packages/policy/ @MKSalad
+/packages/ai/ @MKSalad
+/supabase/migrations/ @MKSalad
+/.github/workflows/ @MKSalad

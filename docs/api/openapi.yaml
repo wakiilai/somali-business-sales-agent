@@ -1,0 +1,6 @@
+openapi: 3.1.0
+info:
+  title: Somali Business Sales Agent API
+  version: 0.1.0
+  description: Contract placeholder for the first implementation slice; no production endpoints are claimed yet.
+paths: {}

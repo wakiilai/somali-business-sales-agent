@@ -1,0 +1,15 @@
+{
+  "name": "somali-business-sales-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Production-grade Somali and English AI sales automation platform",
+  "packageManager": "pnpm@11.4.0",
+  "engines": { "node": ">=22.0.0" },
+  "scripts": {
+    "verify:foundation": "node scripts/check-foundation.mjs",
+    "lint": "node scripts/check-foundation.mjs",
+    "typecheck": "node scripts/check-foundation.mjs",
+    "test": "node scripts/check-foundation.mjs",
+    "build": "node scripts/check-foundation.mjs"
+  }
+}

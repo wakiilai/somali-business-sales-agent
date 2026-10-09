@@ -1,0 +1,20 @@
+name: Security report
+description: Report a suspected security vulnerability privately.
+title: "security: "
+labels: [security]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, tokens, customer data, or secret values. Use private reporting for sensitive details.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and affected area
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
